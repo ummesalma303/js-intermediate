@@ -1,3 +1,9 @@
 h2{
     color: lightcoral;
 }
+.large-text{
+    font-size: 2em;
+}
+.places-color{
+   text-align: center;
+}

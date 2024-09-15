@@ -22,7 +22,7 @@
             dolore
             vitae?</p>
     </header>
-    <main>
+    <main id="main-container">
         <section>
             <h1>My Awesome DOM baba</h1>
             <ul>
@@ -41,9 +41,9 @@
                 <li>Carrot</li>
             </ul>
         </section>
-        <section>
-            <h1 id="places-title">Places i like to visit</h1>
-            <ul>
+        <section id="places-container">
+            <h1 id="places-title" class="large-text">Places i like to visit</h1>
+            <ul id="places-list">
                 <li class="important-places">Soondarban</li>
                 <li class="important-places">Bandorban</li>
                 <li class="important-places">Kataban</li>
@@ -52,7 +52,9 @@
         </section>
     </main>
     
-    <script src="./js/script.js"></script>
+    <script src="./js/dom.js"></script>
+    <script src="./js/append.js"></script>
+    <script src="./js/stylenJs.js"></script>
     <script>
         // console.log('Adding js inside the html');
 
@@ -92,7 +94,7 @@
         // query selectorAll
         const someLi = document.querySelectorAll('.fruits-container li')
         for (const element of someLi) {
-            console.log(element.innerText);
+            // console.log(element.innerText);
         }
         // query selector
         const query=document.querySelector('.fruits-container li');
@@ -103,7 +105,29 @@
           const fruitsBg = document.getElementById('fruits-title').style.background='Yellow'
           const center = document.getElementById('fruits-title').style.textAlign ='center'
 
-          document.getA
+        //   get attribute
+        const title = document.getElementById('fruits-title');
+        const getClass = title.getAttribute('class');
+        // console.log(getClass);
+
+        // classlist
+        // console.log(title.classList.add('new-class'));
+        // console.log(title.classList.remove('blue-bg'));
+        // console.log(title.classList);
+
+        
+        const title2 = document.getElementById('fruits-title');
+        const getId = title2.getAttribute('id');
+        // console.log(getId);
+        
+        // set attribute
+    //    const title = document.getElementById('fruits-title');
+    //    title.setAttribute('title', 'tooltip set by js')
+
+    // className
+    const className= document.getElementsByClassName('fruits-container')[0].innerHTML
+    // console.log(className);
+    
     </script>
 </body>
 </html>
