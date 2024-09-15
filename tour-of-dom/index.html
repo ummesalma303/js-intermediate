@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>tour of DOM</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <style>
+        .fruits-container li{
+            color: tomato;
+        }
+        #fruits-title{
+            color: black;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,18 +26,84 @@
         <section>
             <h1>My Awesome DOM baba</h1>
             <ul>
-                <li>Jalali Set</li>
                 <li>Shafayet</li>
+                <li>Jalali Set</li>
                 <li>bonobash</li>
                 <li>DOM de re baba</li>
             </ul>
         </section>
+        <!-- ------------------------------- fruits -------------------------------- -->
+        <section class="fruits-container">
+            <h1 id="fruits-title" class="some-class random blue-bg">Fruits I like it</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="places-title">Places i like to visit</h1>
+            <ul>
+                <li class="important-places">Soondarban</li>
+                <li class="important-places">Bandorban</li>
+                <li class="important-places">Kataban</li>
+                <li class="important-places">Shalbon</li>
+            </ul>
+        </section>
     </main>
     
-    <script src="./script.js"></script>
+    <script src="./js/script.js"></script>
     <script>
-        console.log('Adding js inside the html');
+        // console.log('Adding js inside the html');
 
+        const student ={
+            name:'abul',
+            id:121,
+            study: function (time) {
+                // console.log(time,'study kortese');
+            }
+        }
+
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+        for (const element of liCollection) {
+            // console.log(element.innerText);
+        }
+        const h1Collection = document.getElementsByTagName('h1');
+        for (const h1 of h1Collection) {
+            // console.log(h1.innerText);
+        }
+
+        //get element by className
+        const places= document.getElementsByClassName('important-places');
+        // console.log(places);
+
+        //get element by id
+        /* change text*/
+        const fruitsTitle = document.getElementById('fruits-title');
+        fruitsTitle.innerText = 'Fruits change by js';
+
+        /*cached all places*/
+        for (const element of places) {
+            // console.log(element.innerText);
+            
+        }
+
+        // query selectorAll
+        const someLi = document.querySelectorAll('.fruits-container li')
+        for (const element of someLi) {
+            console.log(element.innerText);
+        }
+        // query selector
+        const query=document.querySelector('.fruits-container li');
+
+
+        // dynamic style
+          const fruitsColor = document.getElementById('fruits-title').style.color ='red'
+          const fruitsBg = document.getElementById('fruits-title').style.background='Yellow'
+          const center = document.getElementById('fruits-title').style.textAlign ='center'
+
+          document.getA
     </script>
 </body>
 </html>
