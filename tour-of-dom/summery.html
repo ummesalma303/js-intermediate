@@ -6,28 +6,34 @@
     <title>Document</title>
 </head>
 <body>
-    <main>
+    <main id="main-container">
         <!-- ssection*3>h1{Section title-$}li*4{list items-$} -->
         <ssection>
             <h1 class="sction-title">Section title-1</h1>
-            <li>list items-1</li>
-            <li>list items-2</li>
-            <li>list items-3</li>
-            <li>list items-4</li>
+            <ul>
+                <li>list items-1</li>
+                <li>list items-2</li>
+                <li>list items-3</li>
+                <li>list items-4</li>
+            </ul>
         </ssection>
         <ssection id="second-section">
             <h1 class="sction-title">Section title-2</h1>
-            <li>list items-1</li>
-            <li>list items-2</li>
-            <li>list items-3</li>
-            <li>list items-4</li>
+            <ul id="second-list">
+                <li>list items-1</li>
+                <li>list items-2</li>
+                <li>list items-3</li>
+                <li>list items-4</li>
+            </ul>
         </ssection>
         <ssection>
             <h1 class="sction-title">Section title-3</h1>
-            <li>list items-1</li>
-            <li>list items-2</li>
-            <li>list items-3</li>
-            <li>list items-4</li>
+            <ul>
+                <li>list items-1</li>
+                <li>list items-2</li>
+                <li>list items-3</li>
+                <li>list items-4</li>
+            </ul>
         </ssection>
     </main>
 
@@ -35,5 +41,7 @@
         console.log('embedded inside HTML file'); 
     </script>
     <script src="./js/first.js"></script>
+    <script src="./js/second.js"></script>
+    <script src="./js/third.js"></script>
 </body>
 </html>
