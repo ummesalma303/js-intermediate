@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Counter</title>
+    <!-- daisy UI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section class="flex justify-center items-center h-screen">
+        <div id="counter" class="card p-4">
+            <p>Count: <span id="count">0</span></p>
+            <div class="flex space-x-3">
+                <button class="increase-button">Increase [+]</button>
+                <button class="decrease-button">Decrease [-]</button>
+            </div>
+        </div>
+    </section>
+    <script src="./simple-counter.js"></script>
+</body>
+</html>
