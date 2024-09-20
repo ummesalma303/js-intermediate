@@ -25,14 +25,14 @@
                 <div class="divider"></div>
                 <!-- features start-->
                <div class="flex space-x-3">
-                <button class="btn">Add Money</button>
-                <button class="btn">Cash Out</button>
-                <button class="btn">Transactions</button>
+                <button id="show-add-money-form" class="btn">Add Money</button>
+                <button id="show-cash-out-form" class="btn">Cash Out</button>
+                <button id="show-transaction-history" class="btn">Transactions</button>
                </div>
                 <!-- features end-->
                 <div class="divider"></div>
                  <!-- ------------------------ add money form start ------------------------- -->
-                <div class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div id="add-money-form" class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <form class="card-body">
                         <div class="form-control">
                             <label class="label">
@@ -53,7 +53,7 @@
                 </div>
                  <!-- ------------------------- add money form end -------------------------- -->
                  <!-- ------------------------- cash out form start ------------------------- -->
-                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div id="cash-out-form" class="hidden  bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <form class="card-body">
                         <div class="form-control">
                             <label class="label">
@@ -74,6 +74,14 @@
                     </form>
                 </div>
                  <!-- ------------------------- cash out form start ------------------------- -->
+                    <!-- transaction start -->
+                    <div id="transaction-section" class="hidden">
+                        <h2 class="text-3xl text-center ">Transaction History</h2>
+                        <div id="transaction-container" class="space-y-6">
+                    
+                        </div>
+                    </div>
+                    <!-- transaction End -->
             </div>
         </div>
     </div>
@@ -82,5 +90,6 @@
    <script src="./js/utilities.js"></script>
    <script src="./js/addMoney.js"></script>
    <script src="./js/cashOut.js"></script>
+   <script src="./js/features.js"></script>
 </body>
 </html>
